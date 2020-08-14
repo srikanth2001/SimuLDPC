@@ -1,0 +1,53 @@
+<head>
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <title>SimuLDPC</title>
+    <link rel="shortcut icon" href="../media/figs/icon.png">
+
+    <style>
+        .text {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-wrapper black">
+            <a href="/" class="brand-logo center" style="font-weight: bold">SimuLDPC</a>
+        </div>
+    </nav>
+    <br><br>
+    <div class="container">
+        <div class="row">
+            {% for ch in channels %}
+            <div class="col s12 m4">
+                <a href={{ch.channel_slug}}>
+                    <div class="card hoverable grey darken-4">
+                        <div class="card-image">
+                            <img src={{ch.channel_img.url}} height="40%">
+                            <span class="card-title text" style="background-color: black; font-weight: bold">{{ch.channel_type}}</span>
+                        </div>
+                        <div class="card-content text">
+                            <p>{{ch.channel_summary}}</p>
+                        </div>
+                        <div class="card-action center">
+                            <a class="waves-effect hoverable waves-light btn" href={{ch.channel_slug}}><span class = "text">GO</span></a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> {% include "main/includes/footer.html" %}
+
+</body>
