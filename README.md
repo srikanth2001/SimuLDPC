@@ -5,7 +5,7 @@ Web-application for the simulation of LDPC codes
 
 Clone the repository using-
 ```
-git clone https://github.com/Mastan1301/SimuLDPC.git
+https://github.com/srikanth2001/SimuLDPC.git
 ```
 
 Install Django 2.1.5, NumPy, MatplotLib and PIL(Python Image Library) using pip.
